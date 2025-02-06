@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .hero {
+      width: 100%;
+      height: 600px;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+    }
+    .image-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 20px;
+    }
+    .image-container{
+      flex: 1;
+      max-width: 33%;
+      box-sizing: border-box;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: auto;
+    }
+
+    @media (max-width: 600px) {
+      .image-container {
+        max-width: 100%;
+      }
+    }
+
+    @media (min-width: 601px) and (max-width: 900px) {
+      .image-container {
+        max-width: 50%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hero" style="background-image: url('img/hero.jpg');" loading="lazy">
+  </div>
+
+  <h2 style="text-align: center;">Image Content Section</h2>
+
+  <div class="image-row">
+    <div class="image-container">
+      <img 
+        src="img/pic1-s.jpg" 
+        srcset="img/pic1-s.jpg 480w, img/pic1-m.jpg 800w, img/pic1-l.jpg 1200w" 
+        sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px" 
+        alt="error"
+        loading="lazy"
+      >
+    </div>
+    <div class="image-container">
+      <img 
+        src="img/pic2-s.jpg" 
+        srcset="img/pic2-s.jpg 480w, img/pic2-m.jpg 800w, img/pic2-l.jpg 1200w" 
+        sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px" 
+        alt="error"
+        loading="lazy"
+      >
+    </div>
+    <div class="image-container">
+      <img 
+        src="img/pic3-s.jpg" 
+        srcset="img/pic3-s.jpg 480w, img/pic3-m.jpg 800w, img/pic3-l.jpg 1200w" 
+        sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px" 
+        alt="error"
+        loading="lazy"
+      >
+    </div>
+    <div class="image-container">
+      <img 
+        src="img/pic4-s.jpg" 
+        srcset="img/pic4-s.jpg 480w, img/pic4-m.jpg 800w, img/pic4-l.jpg 1200w" 
+        sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px" 
+        alt="error"
+        loading="lazy"
+      >
+    </div>
+    
+  </div>
+</body>
+</html>
