@@ -10,7 +10,6 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-H2T785GM3B');
 </script>
     <style>
@@ -82,8 +81,19 @@
                 <label for="phone-number">Phone</label>
                 <input type="text" id="phone-number" name="phone-number" required>
             </div>
-            <button type="submit">Register</button>
+            <button id="register-buttom" type="submit">Register</button>
         </form>
     </div>
+    <button id="register-button">Register</button>
+
+<script>
+document.getElementById("register-button").addEventListener("click", function() {
+    gtag("event", "register_click", {
+        event_category: "engagement",
+        event_label: "Register Button",
+    });
+    alert("Event Registered");
+});
+</script>
 </body>
 </html> 
